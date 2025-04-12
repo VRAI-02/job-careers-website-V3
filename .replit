@@ -1,0 +1,8 @@
+{ pkgs }: {
+  deps = [
+    pkgs.python3
+  ];
+}
+entrypoint = "app.py"
+[deployment]
+run = ["python3", "app.py"]
