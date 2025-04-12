@@ -1,8 +1,20 @@
-{ pkgs }: {
-  deps = [
-    pkgs.python3
-  ];
-}
+
 entrypoint = "app.py"
+
 [deployment]
 run = ["python3", "app.py"]
+
+[nix]
+channel = "stable-23_05"
+
+[workflows]
+runButton = "Run"
+
+[[workflows.workflow]]
+name = "Run"
+author = 41427261
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 app.py"
