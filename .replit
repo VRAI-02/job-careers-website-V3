@@ -1,5 +1,6 @@
 
 entrypoint = "app.py"
+modules = ["python-3.11"]
 
 [deployment]
 run = ["python3", "app.py"]
@@ -18,3 +19,7 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python3 app.py"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
