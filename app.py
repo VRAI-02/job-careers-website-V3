@@ -28,8 +28,6 @@ def apply_to_job(id):
   data = request.form
   job = load_job_from_db(id)
   add_application_to_db(id,data)
-  #TODO - display an acknowledgement
-  #TODO - send an email
   return render_template('application_submitted.html', application=data, job=job)
 ##host="0.0.0.0" makes the server accessible from any network interface, not just localhost.
 ##while launching in production,it is recommended to disable debug=flase mode since it can expose sensitive information.

@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, text,data
+from sqlalchemy import create_engine, text
 import os
 # database connection secret key from the environment variable
 db_connection_string = os.environ['DB_CONNECTION_STRING']
