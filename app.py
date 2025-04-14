@@ -20,6 +20,7 @@ def show_job (id):
   if not job:
     return "Not Found", 404
   return render_template('jobpage.html',job=job)
-  
+##host="0.0.0.0" makes the server accessible from any network interface, not just localhost.
+##while launching in production,it is recommended to disable debug=flase mode since it can expose sensitive information.
 if __name__ == "__main__":
-  app.run(host="0.0.0.0", debug=True) ##host="0.0.0.0" makes the server accessible from any network interface, not just localhost
+  app.run(host="0.0.0.0", debug=True) 
