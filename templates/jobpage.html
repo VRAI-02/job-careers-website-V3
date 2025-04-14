@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{job.title}} - Career Marketplace</title>
+    <title>{{job.title}} - {{company_name}}</title>
     {% include 'bootstrap.html'%}
   </head>
   <body>
@@ -26,7 +26,8 @@
       </ol>
       <h4>Salary</h4>
       <p>{{job.currency}}{{job.salary}}</p>
-      {% include 'footer.html' %}
+      {% include 'application_form.html' %}
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
